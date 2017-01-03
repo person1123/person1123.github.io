@@ -1,24 +1,23 @@
-var dayImg, nightImg;
+var images = [];
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   $(document).ready(function() {
     $("body").height(window.innerHeight);
   });
-  dayImg = loadImage("mockup2.png");
-  nightImg = loadImage("mockup2-night.png");
-
-  console.log("setup?");
+  images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
 }
 
 function draw() {
   background(0);
   var t = $("#holder").scrollTop() / ($("#main-content").height() - $("#holder").height());
-  tint(255, 255, 255, (cos(t * 2 * PI) + 1) / 2 * 255);
-  image(dayImg, 0, 0, max(width, height / dayImg.height * dayImg.width), max(height, width / dayImg.width * dayImg.height));
-  console.log(t * 2 * PI);
+  var i = floor(t * (images.length - 1));
   
-  tint(255, 255, 255, (-cos(t * 2 * PI) + 1) / 2 * 255);
+  tint(255, 255, 255, (cos((t * (images.length - 1) - i) * PI) + 1) / 2 * 255);
+  image(images[i], 0, 0, max(width, height / images[i].height * images[i].width), max(height, width / images[i].width * images[i].height));
   
-  image(nightImg, 0, 0, max(width, height / nightImg.height * nightImg.width), max(height, width / nightImg.width * nightImg.height));
+  if (i + 1 < images.length) {
+    tint(255, 255, 255, (-cos((t * (images.length - 1) - i) * PI) + 1) / 2 * 255);
+    image(images[i + 1], 0, 0, max(width, height / images[i].height * images[i].width), max(height, width / images[i].width * images[i].height));
+  }
 }
