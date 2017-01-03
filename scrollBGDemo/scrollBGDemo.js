@@ -5,7 +5,7 @@ function setup() {
   $(document).ready(function() {
     $("body").height(window.innerHeight);
   });
-  images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
+  images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
 }
 
 function draw() {
