@@ -4,6 +4,9 @@ function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   $(document).ready(function() {
     $("body").height(window.innerHeight);
+    if (window.location.hash) {
+      $("#main-image").attr("src", window.location.hash.substring(1) + ".png");
+    }
   });
   images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
 }
