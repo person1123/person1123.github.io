@@ -2,6 +2,9 @@ var images = [];
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
+  
+  //blendMode(SUBTRACT);
+  
   $(document).ready(function() {
     $("body").height(window.innerHeight);
     if (window.location.hash) {
