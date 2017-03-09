@@ -11,7 +11,11 @@ function setup() {
       $("#main-image").attr("src", window.location.hash.substring(1) + ".png");
     }
   });
-  images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
+  if (window.location.hash.substring(1).equals("colorwar")) {
+    images = [loadImage("bg2day4.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day4.png")];
+  } else {
+    images = [loadImage("bg2day.png"), loadImage("bg3dusk.png"), loadImage("bg4night.png"), loadImage("bg4night.png"), loadImage("bg1dawn.png"), loadImage("bg2day.png")];
+  }
 }
 
 function draw() {
