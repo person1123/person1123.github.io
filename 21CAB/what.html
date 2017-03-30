@@ -2,6 +2,20 @@
 <head>
 <link rel="stylesheet" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:bold|Rubik" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+$("document").ready(function() {
+	$("#content").scroll(function() {
+		console.log("scroll");
+		$("#background").css("left", "" + Math.min(5, 20 + $("#content").scrollTop() / 400) + "%");
+		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
+		$("#header-text").css("margin-top", "" + (100 + $("#content").scrollTop() / 100) + "px");
+	});
+});
+
+</script>
 
 
 <title>21st Century Advertising Breakdown</title>
@@ -35,11 +49,16 @@ tising Breakdown</div></a></div>
 	</p>
 	<div class="info"><img src="images/examples/frackfeed1.png"/></div>
 	<p>
-	If you enjoyed that content, there is more at <a href="frackfeed.com">frackfeed.com</a>.
+	If you enjoyed that content, there is more at <a href="http://frackfeed.com">frackfeed.com</a>.
 	</p>
 	<p>
-	There is also a genre of this type of thing that is actually very funny, intentionally. Currently, <a href="dennys.tumblr.com">Denny's Tumblr</a>, <a href="twitter.com/dennys">Denny's Twitter</a>, and <a href="twitter.com/sonic_hedgehog">Sonic the Hedgehog's Twitter</a> are all good examples, but this only lasts as long as their current social media intern, hopefully.
+	It's very easy to dismiss this as out-of-touch old people, but there is also a far more insidious genre of this type of thing that is actually very funny, intentionally. Currently, <a href="http://dennys.tumblr.com">Denny's Tumblr</a>, <a href="http://twitter.com/dennys">Denny's Twitter</a>, and <a href="http://twitter.com/sonic_hedgehog">Sonic the Hedgehog's Twitter</a> are all good examples. These often, rather than trying to directly borrow from youth culture, use the aesthetics in creative ways of their own.
 	</p>
+	<div class="info"><img src="images/examples/dennys3.gif"/></div>
+	<p>
+	(The text accompanying that on the Denny's tumblr is “Denny’s is the closest thing to a fantasy hospital where you could come in, hook yourself up to a chicken drip, relax, and nurture yourself. If only we had reclining beds in addition to booths…”)
+	</p>
+	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <img src="images/dog.png" class="dog" /></div>
 </div>
 </body>
 </html>

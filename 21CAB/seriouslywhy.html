@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css?family=Cinzel:bold|Rubik" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+$("document").ready(function() {
+	$("#content").scroll(function() {
+		console.log("scroll");
+		$("#background").css("left", "" + Math.min(5, 20 + $("#content").scrollTop() / 400) + "%");
+		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
+		$("#header-text").css("padding-right", "" + ($("#content").scrollTop() / 100) + "px");
+	});
+});
+
+</script>
+
+
+<title>21st Century Advertising Breakdown</title>
+</head>
+<body>
+<div id="background"></div>
+<div id="header"><div id="header-text"><a href="index.html">21<sup>st</sup> Century Adver<br/>
+tising Breakdown</div></a></div>
+<div id="sidebar">
+	<ul>
+	<a href='what.html'><li>What</li></a>
+	<a href='why.html'><li>Why</li></a>
+	<a href='seriouslywhy.html'><li style="width: 70%">Seriously Why</li></a>
+	</ul>
+</div>
+<div id="content">
+	<div id="spacer"></div>
+	<p>
+	The question you have is probably why this whole thing is noteworthy. Aside from the fact that it's an insulting attempt by soulless corporate elites to be people, or whatever, it's often an attempt by organizations with serious ethical issues to try to distract from them. For example, Denny's, home of the posts inserting food into unrelated situations in creepy-funny ways, has been involved in enough racial discrimination controversies that <a href="https://en.wikipedia.org/wiki/Denny%27s#Discrimination_controversies">“Discrimination controversies”</a> is the second-longest section on its <a href="https://en.wikipedia.org/wiki/Denny%27s">Wikipedia page</a>.
+	</p>
+	<p>
+	That's not to say that this kind of advertising is entirely bad. Although its attempt to convince you that corporations really are people is moderately subversive, it does make it clear that while in fact advertising can be much more subtle, the people making it probably aren't actually smart enough for that. It is often very hard to tell whether online content is sponsored, leading to conspiracy theories during the 2016 election that any online commentator a Donald Trump supporter didn't like was a paid agent of Hillary Clinton's campaign. However, if you look at any of the content attempting to appeal to young online audiences created by the type of marketers the Hillary Clinton campaign employed, it is very clear that they are incapable of blending in that well.
+	</p>
+	<p>
+	This should probably be a huge relief to you. There are many ways that Internet advertising is terrifying - it can target you, specifically, finding your specific vulnerabilities, and these targeted messages often go undetected by the everyone else (so, for example, during the closing months of the 2016 presidential election, the Donald Trump campaign sent ads to certain black people on Facebook showing Hillary Clinton's infamous “superpredator” comment, which were not reported on because no reporters saw them, as part of a campaign to depress minority turnout). But at least for now, you can probably be sure what is and isn't an ad.
+	</p>
+	<p>
+	Be careful out there.
+	</p>
+	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <a href="http://tentacles.online"><img src="images/dog.png" class="dog" /></a></div>
+</div>
+</body>
+</html>

@@ -31,13 +31,30 @@ body {
 	background: white;
 	text-transform: uppercase;
 	font-family: 'Cinzel', sans-serif;
-	font-size: 50pt;
+	font-size: 40pt;
 	text-align: right;
 	padding-right:px;
 	padding-left:1em;
 	margin-top: 100px;
 	position: relative;
 	z-index: 10;
+    line-height: 1em;
+}
+
+.footer {
+	margin-top: 100px;
+	margin-bottom: 1em;
+}
+
+@media(min-width: 1600px) {
+	#header-text {
+		font-size: 50pt;
+		line-height: 1.2em;
+	}
+
+	#sidebar li {
+		font-size: 20pt;
+	}
 }
 
 #header-text a {
@@ -47,25 +64,32 @@ body {
 
 #sidebar {
 	float:left;
-	width: 500px;
+	width: 400px;
 	top: 400px;
 }
 
 #sidebar ul {
 	list-style-type: none;
 	margin-top: -1em;
-	padding-left: 0;
+    padding-left: 0;
+}
+
+.dog {
+	width: 4em;
+	position: relative;
+	top: 2em;
+	margin-left: 10%;
 }
 
 #sidebar li {
 	margin:2em;
+    margin-left:0;
 	padding: .5em;
 	font-family: 'Rubik', sans-serif;
-	font-size: 20pt;
+	font-size: 17pt;
 	background: white;
 	text-align: right;
 	width: 100%;
-	margin-left: 0;
 }
 
 #sidebar a:nth-child(2) li {
@@ -81,10 +105,18 @@ body {
 	color: black;
 }
 
+a {
+    color: e38698;
+}
+
+a:visited {
+    color: 7f5386;
+}
+
 #content {
 	height: 100%;
 	overflow: scroll;
-	width: calc(100% - 600px);
+	width: calc(100% - 500px);
 	right:0;
 	position:absolute;
 	top: 0;
@@ -98,10 +130,12 @@ body {
 
 #content p {
 	background-color: white;
+    padding-left: 10%;
+    padding-right: 20%;
 }
 
 #spacer {
-	height: 400px;
+	height: 250px;
 }
 
 .info {

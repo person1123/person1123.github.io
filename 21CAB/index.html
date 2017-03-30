@@ -2,7 +2,20 @@
 <head>
 <link rel="stylesheet" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:bold|Rubik" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<script>
+
+$("document").ready(function() {
+	$("#content").scroll(function() {
+		console.log("scroll");
+		$("#background").css("top", "" + Math.min(25, 20 + $("#content").scrollTop() / 400) + "%");
+		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
+		$("#header-text").css("padding-right", "" + ($("#content").scrollTop() / 100) + "px");
+	});
+});
+
+</script>
 
 <title>21st Century Advertising Breakdown</title>
 </head>
@@ -26,6 +39,7 @@ tising Breakdown</div></a></div>
 	<div class="example"><img src='images/examples/frackfeed1.png'/></div>
 	<div class="example"><img src='images/examples/kidzbop1.png'/></div>
 	<div class="example"><img src='images/examples/toshiba1.png'/></div>
+	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <img src="images/dog.png" class="dog" /></div>
 </div>
 </body>
 </html>

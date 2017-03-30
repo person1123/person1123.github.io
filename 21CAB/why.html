@@ -2,6 +2,20 @@
 <head>
 <link rel="stylesheet" href="styles/style.css">
 <link href="https://fonts.googleapis.com/css?family=Cinzel:bold|Rubik" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+
+$("document").ready(function() {
+	$("#content").scroll(function() {
+		console.log("scroll");
+		$("#background").css("top", "" + Math.min(25, 20 + $("#content").scrollTop() / 400) + "%");
+		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
+		$("#header-text").css("margin-top", "" + (100 + $("#content").scrollTop() / 100) + "px");
+	});
+});
+
+</script>
 
 
 <title>21st Century Advertising Breakdown</title>
@@ -20,17 +34,21 @@ tising Breakdown</div></a></div>
 <div id="content">
 	<div id="spacer"></div>
 	<p>
-	It's no secret that our society is collapsing a little bit. All you have to do is type in <a href="nytimes.com">nytimes.com</a> into your browser, for example, and you can see that there are a lot of bad things happening. But it's more than that - the things that are happening make no sense. Most recently, we have elected somebody who dispenses with all the conventions of American politics, such as generally trying to tell the truth, appear leaderly, or claiming to believe in science, but this has been going on for several years. The media has been engaged in explaining why the youth generation is lazy and entitled while study after study shows that <a href="http://www.npr.org/sections/thetwo-way/2016/12/09/504989751/u-s-kids-far-less-likely-to-out-earn-their-parents-as-inequality-grows">they are going to be the first generation in history to be worse off than their parents</a>. Tech has created a new boom for the American economy, but these immensely successful companies only employ on the order of thousands of workers to create what was previously deemed impossible.
+	It's no secret that our society is collapsing a little bit. All you have to do is type in <a href="nytimes.com">nytimes.com</a> into your browser, for example, and you can see that there are a lot of bad things happening, and the new official slogan of the Washington Post is “Democracy dies in darkness.” But it's more than that - the things that are happening make no sense. Most recently, we have elected somebody who dispenses with all the conventions of American politics, such as generally trying to tell the truth, appear leaderly, or claiming to believe in science, but this has been going on for several years. The media has been engaged in explaining why the youth generation is lazy and entitled while study after study shows that <a href="http://www.npr.org/sections/thetwo-way/2016/12/09/504989751/u-s-kids-far-less-likely-to-out-earn-their-parents-as-inequality-grows">they are going to be the first generation in history to be worse off than their parents</a>. Tech has created a new boom for the American economy, but these immensely successful companies only employ on the order of thousands of workers to create what was previously deemed impossible.
 	</p>
 	<div class="info"><img src="images/info/outearning.jpg"/></div>
 	<p>
-	In the midst of this environment of unprecedently democratic creation tools and optimism, those who the society is in the process of leaving behind (and their buddies who happen to be studying computer science) have begun to create underground popular entertainment that calls to mind the historic movement of art that makes no sense - Dada. (<a href="http://mizuki-takashima.tumblr.com/post/138072197441/stormingtheivory-leftclausewitz">These people</a> have a much better summary than I could ever give on a website that is primarily a social network for weird high school kids)
+	One of the major positive developments of this tech boom, though, is that it is so much easier than it has ever been to make things or find entertainment and information. Those who the society is in the process of leaving behind (and their buddies who happen to be studying computer science) have access to almost the entire visual and literary history of Western culture and the tools to manipulate it.
+	</p>
+	<p>
+	In the 1910s and 1920s, there was a similar environment, where people's assumptions of the nature of the world were rocked by international events (in this case, World War I). A group of artists formed an art movement focused on creating things that didn't make sense - Dada. Current Web culture has a very similar motivation, but the fact that almost everyone (in the developed world) has access to creation tools means that rather than an art movement, we have a global set of often visual inside jokes. (<a href="http://mizuki-takashima.tumblr.com/post/138072197441/stormingtheivory-leftclausewitz">These people</a> have a much better summary than I could ever give, on a website that is primarily a social network for weird high school kids)
 	</p>
 	<div class="info"><img src='images/info/dadaStatue.jpg'/></div>
 	<div class="info"><img src='images/info/vaporwaveStatue.jpg'/></div>
 	<p>
-	Since many companies target the youth with their products, they have begun to try to coopt this vernacular. Unfortunately, as the source of much of the subject of this critique, they typically do not succeed. This usually comes across as pretty funny, and therefore becomes incorporated into the source material of the remix culture from which it is attempting to draw. When they do succeed, it is a notable event, but in its blindness or wilful opposition to the politics of this accidental art movement, can serve to hide ills such as abuse of workers.
+	Since many companies target the youth with their products, they have begun to try to coopt this vernacular. Unfortunately, many of the jokes and images they copy have messages fundamentally at odds with their ethos as corporations (or maybe they just don't know what they're doing), so typically do not succeed. This is hilarious, so gets remixed eternally by the very people it is attempting to target, feeding the churn of new ideas.
 	</p>
+	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <img src="images/dog.png" class="dog" /></div>
 </div>
 </body>
 </html>
