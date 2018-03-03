@@ -160,3 +160,31 @@ a:visited {
 	max-width: 100%;
 	max-height: 100%;
 }
+
+* { box-sizing: border-box; }
+
+@media(max-width: 750px) {
+	#content {
+		position: static;
+		width: 100%;
+		overflow: visible;
+		float: left;
+	}
+
+	.example {
+		width: 100%;
+		height: auto;
+	}
+
+	#sidebar {
+		max-width: 100%;
+	}
+
+	#spacer {
+		display: none;
+	}
+
+	#header-text {
+		font-size: 23pt;
+	}
+}

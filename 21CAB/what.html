@@ -8,7 +8,6 @@
 
 $("document").ready(function() {
 	$("#content").scroll(function() {
-		console.log("scroll");
 		$("#background").css("left", "" + Math.min(5, 20 + $("#content").scrollTop() / 400) + "%");
 		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
 		$("#header-text").css("margin-top", "" + (100 + $("#content").scrollTop() / 100) + "px");
@@ -58,7 +57,7 @@ tising Breakdown</div></a></div>
 	<p>
 	(The text accompanying that on the Denny's tumblr is “Denny’s is the closest thing to a fantasy hospital where you could come in, hook yourself up to a chicken drip, relax, and nurture yourself. If only we had reclining beds in addition to booths…”)
 	</p>
-	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <img src="images/dog.png" class="dog" /></div>
+	<div class="footer">Created by <a href="http://popularkids.club">Noa Chazan</a> <img src="images/dog.png" class="dog" /></div>
 </div>
 </body>
 </html>

@@ -8,7 +8,6 @@
 
 $("document").ready(function() {
 	$("#content").scroll(function() {
-		console.log("scroll");
 		$("#background").css("left", "" + Math.min(5, 20 + $("#content").scrollTop() / 400) + "%");
 		$("#sidebar").css("width", "" + (400 + $("#content").scrollTop() / 100) + "px");
 		$("#header-text").css("padding-right", "" + ($("#content").scrollTop() / 100) + "px");
@@ -45,7 +44,7 @@ tising Breakdown</div></a></div>
 	<p>
 	Be careful out there.
 	</p>
-	<div class="footer">Created by <a href="http://jonahchazan.org">Jonah Chazan</a> <a href="http://tentacles.online"><img src="images/dog.png" class="dog" /></a></div>
+	<div class="footer">Created by <a href="http://popularkids.club">Noa Chazan</a> <a href="http://tentacles.online"><img src="images/dog.png" class="dog" /></a></div>
 </div>
 </body>
 </html>
